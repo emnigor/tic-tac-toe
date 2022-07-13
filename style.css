@@ -1,0 +1,497 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: gray;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    position: relative;
+    background-color: gray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+h1 {
+    margin:.8%;
+    text-align: center;
+}
+
+@media(max-width:320px) {
+        
+    h1 {
+        font-size: 22px;
+    }
+}
+
+.area-game {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#area {
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: bisque;
+}
+
+@media(max-width:320px) {
+        
+    #area {
+        width: 240px;
+        height: 240px;
+    }
+}
+
+.red {
+    color: rgb(240, 0, 0);
+    font-weight: bolder;
+}
+
+.box {
+    width: 100px;
+    height: 100px;  
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 55px;
+}
+
+.box:hover {
+    background-color: rgb(0, 132, 165, 0.2);
+}
+
+@media(max-width:320px) {
+        
+    .box {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+#winner {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#modal-window{
+    position: absolute;
+    top: 0%;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+    
+}
+
+#window-result{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background-color: gray;
+}
+
+@media(max-width:320px) {
+        
+    #window-result {
+        width: 240px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+.pls-conteiner {
+
+    position: absolute;
+    top: 0%;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.batns-play {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+@media(max-width:320px) {
+        
+    .batns-play {
+        height: 80%;
+     flex-direction: column;  
+     align-items: center;
+     justify-content: space-around;
+    }
+}
+
+.type-play {
+    text-align: center;
+}
+
+.choice-pls {
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 100px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+@media(max-width:320px) {
+        
+    .choice-pls {
+        width: 100%;
+        height: 150px;
+
+    }
+}
+
+
+.one-pls {
+    border: 1px solid black;
+    width: 130px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.one-pls:hover {
+    border: 3px solid black;
+    width: 132px;
+    height: 52px;
+    background-color: blanchedalmond;
+}
+
+
+
+.two-pls {
+    border: 1px solid black;
+    width: 130px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.two-pls:hover {
+    border: 3px solid black;
+    width: 132px;
+    height: 52px;
+    background-color: blanchedalmond;
+}
+
+
+.btns-cont{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media(max-width:320px) {
+    .btns-cont     {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 140px;
+
+    }
+}
+
+
+
+#area-btn {
+    border: 1px solid black;
+    width: 130px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    line-height: 23px;
+    text-align: center;
+    cursor: pointer;
+    transform: 0.3s;
+}
+
+#area-btn:hover {
+    border: 3px solid black;
+    width: 132px;
+    height: 52px;
+    background-color: blanchedalmond;
+}
+
+#check-result {
+    border: 1px solid black;
+    width: 130px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    cursor: pointer; 
+    line-height: 23px;
+    transform: 0.3s;
+}
+
+#check-result:hover {
+    border: 3px solid black;
+    width: 132px;
+    height: 52px;
+    background-color: blanchedalmond;
+}
+
+#check-result-button {
+    border: 1px solid black;
+    width: 130px;
+    height: 50px;
+    background-color: blanchedalmond;
+    color: black;
+    text-align: center;
+    cursor: pointer; 
+    line-height: 23px;
+    margin: 0 auto;
+    margin-top: 10px;
+    transform: 0.3s;
+}
+
+#check-result-button:hover {
+    font-weight: bold;
+}
+
+.dashboar-one{
+    position: absolute;
+    top: 0%;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.record-table{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 235, 205);
+}
+
+@media(max-width:320px) {
+        
+    .record-table {
+        width: 200px;
+    }
+}
+
+.record {
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+@media(max-width:320px) {
+        
+    
+    .record {
+        width: 200px;
+        font-size: 12px;
+    }
+
+}
+
+.record-name {
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media(max-width:320px) {
+
+    .record-name {
+        width: 200px;
+        font-size: 12px;
+    }
+}
+
+.record-two-name {
+    width: 300px;
+    height: 40px;
+    border: 1px solid black;
+    box-sizing: border-box;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media(max-width:320px) {
+
+    .record-two-name {
+        width: 200px;
+        font-size: 12px;
+    }
+}
+
+.dashboar-two{
+    position: absolute;
+    top: 0%;
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.record-table-two{
+    position: absolute;
+    top: 50%;
+    margin: 0;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: rgb(255, 235, 205);
+}
+
+@media(max-width:320px) {
+        
+    .record-table-two {
+        width: 200px;
+    }
+}
+
+.record-two {
+    width: 300px;
+    height: 30px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+@media(max-width:320px) {
+        
+    .record-two {
+        width: 200px;
+        font-size: 12px;
+    }
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+}
+
+footer {
+background-color: rgba(247, 246, 241, 0.9);
+}
+
+.footer {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+min-height: 70px;
+padding: 0 20px;
+}
+
+@media(max-width:320px) {
+        
+    .footer {
+        flex-direction: column;
+    }
+}
+
+.footer-data {
+font-weight: bold;
+display: flex;
+align-items: center;
+justify-content: space-between;
+min-width: 150px;
+}
+
+.github {
+    text-decoration: none;
+    font-weight: bold;
+    color: #000000;
+    transition: .3s;
+    
+        }
+    
+        .github:hover {
+            color: orange;
+            
+                }
+
+                .rs {
+                    width: 135px;
+                    height: 50px;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-image: url(./assets/svg/rss.svg);
+                    filter: invert(0%) sepia(84%) saturate(7385%) hue-rotate(205deg) brightness(107%) contrast(113%);
+                    transition: .3s;
+                    cursor: pointer;
+                }
+            
+                .rs:hover {
+                    filter: invert(61%) sepia(95%) saturate(1601%) hue-rotate(
+                        0deg
+                        ) brightness(103%) contrast(105%);
+                }
+
+
+                @media(max-width:480px) {
+        
+                    .rs {
+                        width: 90px;
+                        height: 40px;
+                        align-items: center;
+                    }
+                }
+
+            
+
